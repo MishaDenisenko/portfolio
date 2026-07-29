@@ -6,7 +6,7 @@ Modern portfolio website built with **React**, **TypeScript**, **Vite**, and **T
 
 Designed to showcase my projects, skills, and experience with smooth animations and a clean UI.
 
-[Live Demo](https://portfolio.verce.app) • [GitHub](https://github.com/MishaDenisenko/portfolio)
+[Live Demo](https://portfolio-eight-alpha-49.vercel.app) • [GitHub](https://github.com/MishaDenisenko/portfolio)
 
 </div>
 
@@ -85,7 +85,7 @@ npm run preview
 ---
 
 ## 📸 Preview
-[Vercel](https://portfolio.verce.app)
+![Preview](./screenshots/preview.png)
 
 ---
 
