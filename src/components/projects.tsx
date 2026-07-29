@@ -53,7 +53,7 @@ export default function Projects(props: Props) {
                         <div className='relative'>
                             <div className='flex items-start justify-between'>
                                 <span className='font-mono text-xs uppercase tracking-wider text-muted-foreground'>{ p.tag }</span>
-                                <a href={ p.link } className={ 'text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100' }>
+                                <a href={ p.link } className={ 'text-muted-foreground opacity-100 md:opacity-0 transition-opacity md:group-hover:opacity-100' }>
                                     <ExternalLink className='h-4 w-4' />
                                 </a>
                             </div>
