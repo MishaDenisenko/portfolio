@@ -17,7 +17,7 @@ Designed to showcase my projects, skills, and experience with smooth animations 
 - 🎨 Modern responsive design
 - ⚡ Built with Vite for fast performance
 - 🌙 Dark theme
-- ✨ Smooth animations and transitions
+- ✨ Smooth animations and translations
 - 📱 Fully responsive layout
 - 🧩 Modular component architecture
 - 🚀 Optimized for production

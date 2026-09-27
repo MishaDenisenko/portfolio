@@ -1,21 +1,27 @@
 import SectionHead from './section-head.tsx';
 import { Mail } from 'lucide-react';
 import { LuLinkedin, LuGithub } from 'react-icons/lu';
+import type { Lang } from '../App.tsx';
+import { translations } from '../data/translations.ts';
 
 
-type Props = {};
+type Props = {
+    lang: Lang
+};
 
-export default function Contact(props: Props) {
+export default function Contact({ lang }: Props) {
+    const { label, title, desc } = translations[lang].contacts;
+    
     return (
         <section id='contact' className='mx-auto max-w-4xl px-6 py-32 text-center'>
-            <SectionHead label='04 · Контакты' title='Давайте что-нибудь построим' center />
+            <SectionHead label={ label } title={ title } center />
             <p className='mx-auto mt-6 max-w-xl text-muted-foreground'>
-                Ищу работу или интересные пет-проекты. Пишите — отвечаю быстро.
+                { desc }
             </p>
             <div className='mt-10 flex flex-wrap justify-center gap-3'>
                 <a
                     href='mailto:midenisenko@gmail.com'
-                    className='bg-gradient-brand inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-primary-foreground shadow-[var(--shadow-glow)] transition-transform hover:scale-[1.02]'
+                    className='bg-gradient-brand inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-primary-foreground shadow-(--shadow-glow) transition-transform hover:scale-[1.02]'
                 >
                     <Mail className='h-4 w-4' /> midenisenko@gmail.com
                 </a>

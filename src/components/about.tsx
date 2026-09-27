@@ -1,29 +1,26 @@
 import { Code2, Database, Sparkles } from 'lucide-react';
 import SectionHead from './section-head.tsx';
+import type { Lang } from '../App.tsx';
+import { translations } from '../data/translations.ts';
 
-type Props = {};
+type Props = {
+    lang: Lang
+};
 
-export default function About(props: Props) {
+export default function About({ lang }: Props) {
+    const { cardsInfo, label, title } = translations[lang].about;
+    
     const cards = [
-        {
-            icon: Code2,
-            title: 'Frontend',
-            desc: 'Пишу отзывчивые интерфейсы на React и Next на TypeScript. Слежу за accessibility и производительностью.'
-        },
-        {
-            icon: Database,
-            title: 'Backend',
-            desc: 'Работаю с Node.js, Nest.js, Postgres и REST/tRPC API. Разбираюсь в схемах данных и авторизации.'
-        },
-        {
-            icon: Sparkles,
-            title: 'Продукт',
-            desc: 'Люблю понимать задачу целиком — от UX до деплоя. Хочу расти в сторону senior-инженера.'
-        }
-    ];
+        { icon: Code2 },
+        { icon: Database },
+        { icon: Sparkles }
+    ].map((icon, i) =>
+        ({ ...icon, ...cardsInfo[i] })
+    );
+    
     return (
         <section id='about' className='mx-auto max-w-6xl px-6 py-32'>
-            <SectionHead label='01 · О себе' title='Джуниор с амбициями senior' />
+            <SectionHead label={ label } title={ title } />
             <div className='mt-12 grid gap-4 md:grid-cols-3'>
                 { cards.map(({ icon: Icon, title, desc }) => (
                     <div key={ title } className='glass group rounded-2xl p-6 transition-all hover:-translate-y-1 hover:bg-white/4'>

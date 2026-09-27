@@ -1,5 +1,6 @@
 import SectionHead from './section-head.tsx';
-import { Mail } from 'lucide-react';
+import type { Lang } from '../App.tsx';
+import { translations } from '../data/translations.ts';
 
 const stack = {
     Frontend: ['React', 'TypeScript', 'Next.js', 'Redux/Zustand', 'Vite', 'Tailwind CSS', 'UI libraries'],
@@ -7,12 +8,16 @@ const stack = {
     Tools: ['Git', 'Docker', 'Figma', 'Vitest', 'GitHub Actions', 'Linux']
 };
 
-type Props = {};
+type Props = {
+    lang: Lang
+};
 
-export default function Stack(props: Props) {
+export default function Stack({ lang }: Props) {
+    const { label, title } = translations[lang].stack;
+    
     return (
         <section id='stack' className='mx-auto max-w-6xl px-6 py-32'>
-            <SectionHead label='03 · Стек' title='Технологии, с которыми работаю' />
+            <SectionHead label={ label } title={ title } />
             <div className='mt-12 grid gap-4 md:grid-cols-3'>
                 { Object.entries(stack).map(([group, items]) => (
                     <div key={ group } className='glass rounded-2xl p-6'>
