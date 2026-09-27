@@ -85,7 +85,7 @@ export const translations = {
             label: 'Open to suggestions · Junior Fullstack',
             title: 'I create web products',
             subtitle: 'with an eye for detail',
-            desc: 'Hi, I\'m Misha—a junior full-stack developer from Kyiv.\n' +
+            desc: 'Hi, I\'m Misha — a junior full-stack developer from Kyiv.\n' +
                 'I develop using TypeScript, React, and Node.js. I learn something new every day, and I love clean code\n' +
                 'and beautiful user interfaces.',
             projects: 'View Projects',
@@ -99,19 +99,19 @@ export const translations = {
         },
         about: {
             label: '01 · About Me',
-            title: 'A junior with senior ambitions',
+            title: 'Junior with senior ambitions',
             cardsInfo: [
                 {
                     title: 'Frontend',
-                    desc: 'I build responsive user interfaces using React and Next. I prioritize accessibility and performance.'
+                    desc: 'Build responsive user interfaces using React and Next. I prioritize accessibility and performance.'
                 },
                 {
                     title: 'Backend',
-                    desc: 'I work with Node.js, Nest.js, Postgres, and REST/tRPC APIs. I have a good understanding of data models and authorization.'
+                    desc: 'Work with Node.js, Nest.js, Postgres, and REST/tRPC APIs. I have a good understanding of data models and authorization.'
                 },
                 {
                     title: 'Product',
-                    desc: 'I like to understand the entire scope of a project — from UX to deployment. I want to grow into a senior engineer.'
+                    desc: 'Like to understand the entire scope of a project — from UX to deployment. I want to grow into a senior engineer.'
                 }
             ]
         },
